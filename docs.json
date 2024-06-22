@@ -1,0 +1,309 @@
+{
+  "documentation": {
+    "getting-started": {
+      "installation": {
+        "url": "https://perfectui.netlify.app/docs/installation",
+        "title": "Get started with Perfect UI",
+        "description": "An exceptionally lightweight and highly customizable CSS and JavaScript framework for crafting elegant user interfaces.",
+        "examples": [
+          {
+            "tags": ["cdn", "head", "script"],
+            "explanation": [
+              "Place the `<link>` tag in the `<head>` for our CSS, and the `<script>` tag for our JavaScript bundle before the closing `</body>`"
+            ],
+            "code": "<!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><link rel='stylesheet' href='https://unpkg.com/@chrissgon/perfectui@latest/dist/perfectui.css'></head><body><button class='btn btn-solid-primary'>My button</button><script src='https://unpkg.com/@chrissgon/perfectui@latest/dist/perfectui.js'></script></body></html>"
+          },
+          {
+            "tags": ["cdn", "window", "document"],
+            "explanation": [
+              "When imported via CDN, Perfect UI provides methods in `window` and `document` "
+            ],
+            "code": "console.log(window.perfectui); // { setMode: ƒ ...} console.log(document.perfectui); // { setMode: ƒ ...}"
+          },
+          {
+            "tags": ["cdn", "module"],
+            "explanation": [
+              "You can also import Perfect UI as a module by CDN."
+            ],
+            "code": "<script type='module'>import * as perfectUI from 'https://unpkg.com/@chrissgon/perfectui@latest/dist/perfectui.js'; console.log(perfectUI); // { setMode: ƒ ...}</script>"
+          },
+          {
+            "tags": ["package manager", "npm", "yarn", "pnpm", "bun"],
+            "explanation": [
+              "Install by package manager",
+              "You can also install Perfect UI by package manager."
+            ],
+            "code": [
+              "npm i @chrissgon/perfectui",
+              "yarn add @chrissgon/perfectui",
+              "pnpm i @chrissgon/perfectui",
+              "bun i @chrissgon/perfectui"
+            ]
+          },
+          {
+            "tags": ["cdn", "import", "module"],
+            "explanation": [
+              "After installation, import the styles and methods in your `.js` or `.ts` file."
+            ],
+            "code": "import { setMode } from '@chrissgon/perfectui';import '@chrissgon/perfectui/dist/perfectui.css';"
+          }
+        ]
+      },
+      "typescript": {
+        "url": "https://perfectui.netlify.app/docs/typescript",
+        "title": "Typescript friendly",
+        "description": "Perfect UI is fully typed, developed in Typescript. All the methods and interfaces are available for use.",
+        "examples": [
+          {
+            "tags": [
+              "typescript",
+              "types",
+              "index.d.ts",
+              "setThemeColor",
+              "setMode",
+              "IThemeColor"
+            ],
+            "explanation": [
+              "Perfect UI is fully typed, developed in Typescript. All the methods and interfaces are available for use."
+            ],
+            "code": "export interface IThemeColor { 50: number[] | string; 100: number[] | string; 200: number[] | string; 300: number[] | string; 400: number[] | string; 500: number[] | string; 600: number[] | string; 700: number[] | string; 800: number[] | string; 900: number[] | string; 950: number[] | string;} export declare function setThemeColor(colors: IThemeColor): void; export declare function setMode(theme?: 'system' | 'dark' | 'light'): void;"
+          }
+        ]
+      },
+      "tailwind css": {
+        "url": "https://perfectui.netlify.app/docs/tailwind-css",
+        "title": "Tailwind CSS",
+        "description": "Combine Perfect UI components with Tailwind CSS utilities for a light, fast and customizable solution.",
+        "examples": [
+          {
+            "tags": [
+              "tailwindcss",
+              "perfectui",
+              "integration",
+              "combine",
+              "light",
+              "fast",
+              "customizable"
+            ],
+            "explanation": [
+              "Perfect UI + Tailwind CSS = ❤️",
+              "Perfect UI is a framework inspired by Tailwind CSS, focused on providing basic components to create elegant user interfaces that are light, fast and customizable.",
+              "Because of this the framework does not provide classes for layout, breakpoints, fonts, colors and so on.",
+              "We strongly recommend that Perfect UI is used with Tailwind CSS to provide a complete solution."
+            ]
+          }
+        ]
+      },
+      "license": {
+        "url": "https://perfectui.netlify.app/docs/license",
+        "title": "Learn more about the licensing terms for Perfect UI",
+        "description": "Perfect UI is released under the MIT license and is copyright 2024 Chrissgon. Boiled down to smaller chunks, it can be described with the following conditions.",
+        "examples": [
+          {
+            "tags": ["license", "MIT", "copyright"],
+            "explanation": [
+              "MIT License",
+              "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:",
+              "The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.",
+              "THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+            ]
+          }
+        ]
+      }
+    },
+    "customization": {
+      "darkmode": {
+        "url": "https://perfectui.netlify.app/docs/dark-mode",
+        "title": "Dark Mode",
+        "description": "Implement different modes in your application easily with Perfect UI through auxiliary methods.",
+        "examples": [
+          {
+            "tags": ["darkmode", "setMode"],
+            "explanation": [
+              "Perfect ui provides methods to make customization easier. You can set the mode using the `setMode` function."
+            ],
+            "code": "import { setMode } from '@chrissgon/perfectui'; setMode('dark'); // system, light or dark"
+          },
+          {
+            "tags": ["darkmode", "setMode", "mode button"],
+            "explanation": [
+              "Mode button",
+              "You can implement a mode button in your application for the user to change according to their preference."
+            ],
+            "code": "<label class='field-group gap-2 w-fit'><i class=bi-sun></i> <input class=switch id=mode type=checkbox> <i class=bi-moon></i></label><script type=module>import{setMode}from'https://unpkg.com/@chrissgon/perfectui@latest/dist/perfectui.js';document.getElementById('mode').addEventListener('change', (e) => {const dark = e.target.checked;setMode(dark ? 'dark' : 'light');});</script>"
+          }
+        ]
+      },
+      "theme color": {
+        "url": "https://perfectui.netlify.app/docs/theme-color",
+        "title": "Define your own color palette",
+        "description": "Perfect UI allows you to define your own color palette, automatically adjusting all components to it.",
+        "examples": [
+          {
+            "tags": [
+              "theme color",
+              "customizable",
+              "color",
+              "setThemeColor",
+              "palette"
+            ],
+            "explanation": [
+              "To better adapt to your visual identity, Perfect UI provides the `setThemeColor` method that allows you to define your color palette, setting it as the default for the entire application."
+            ],
+            "code": "import{setThemeColor}from'@chrissgon/perfectui';const palette={50:'240, 250, 255',100:'223, 244, 255',200:'184, 235, 255',300:[121,220,255],400:[52,204,254],500:[7,182,240],600:[0,146,205],700:[0,116,166],800:[3,98,137],900:[9,81,113],950:[6,51,75]};setThemeColor(palette);"
+          },
+          {
+            "tags": [
+              "theme color",
+              "customizable",
+              "color",
+              "setThemeColor",
+              "palette"
+            ],
+            "explanation": [
+              "TThe `setThemeColor` method expects to receive an object that satisfies the `IThemeColor` interface."
+            ],
+            "code": "export interface IThemeColor { 50: number[] | string; 100: number[] | string; 200: number[] | string; 300: number[] | string; 400: number[] | string; 500: number[] | string; 600: number[] | string; 700: number[] | string; 800: number[] | string; 900: number[] | string; 950: number[] | string;}"
+          }
+        ]
+      }
+    },
+    "general": {
+      "layout group": {
+        "url": "https://perfectui.netlify.app/docs/layout-group",
+        "title": "Layout Group",
+        "description": "An easy way to deal with grouping elements.",
+        "examples": [
+          {
+            "tags": [
+              "layout",
+              "group",
+              "group-row",
+              "group-col",
+              "group-responsive",
+              "group-item"
+            ],
+            "explanation": [
+              "To deal with grouping elements, Perfect UI provides the `.group-row` , `.group-col` , `.group-responsive` and `.group-item` classes. These will be useful for dealing with unnecessary borders and rounding of elements.",
+              "For some elements, the use of this class is mandatory, such as the `<accordion>`.",
+              "If the children of the group have a class with `.item` , it is not necessary to add the class  `.group-item` , as in the case of accordion. "
+            ],
+            "code": "<div class='accordion accordion-bordered group-col'><details class='accordion-item'><summary>First question</summary><article>First answer</article></details><details class='accordion-item'><summary>Second question</summary><article>Second answer</article></details></div>"
+          },
+          {
+            "tags": ["layout", "group", "group-row", "group-item", "button"],
+            "explanation": [
+              "Other elements are optional, such as the `<button>`.",
+              "The buttons need the `.group-item` class to work, because they have no class  `.item`."
+            ],
+            "code": "<div class='group group-row'><button class='group-item btn btn-white'>Left</button><button class='group-item btn btn-white'>Middle</button><button class='group-item btn btn-white'>Right</button></div>"
+          },
+          {
+            "tags": [
+              "layout",
+              "group",
+              "group-responsive",
+              "group-item",
+              "card"
+            ],
+            "explanation": [
+              "If you need the group to change automatically with the screen size, simply use `group-responsive`.",
+              "For screens larger than `1024px` , `group-row` will be applied, for smaller screens `group-col`."
+            ],
+            "code": "<section class='group-responsive'><!-- card #1 --><div class='card group-item'><img alt='Accordion Image' src='https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80'><article class='card-content flex flex-col justify-between'><div><h1 class='font-semibold text-xl mb-2'>Card Title</h1><p>Some quick example text to build on the card title and make up the bulk of the card's content.</p></div><p class='text-xs text-secondary mt-8'>Last updated 5 mins ago</p></article></div><!-- card #2 --><div class='card group-item'><img alt='Accordion Image' src='https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80'><article class='card-content flex flex-col justify-between'><div><h1 class='font-semibold text-xl mb-2'>Card Title</h1><p>Some quick example text to build on the card title and make up the bulk of the card's content.</p></div><p class='text-xs text-secondary mt-8'>Last updated 5 mins ago</p></article></div><!-- card #3 --><div class='card group-item'><img alt='Accordion Image' src='https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80'><article class='card-content flex flex-col justify-between'><div><h1 class='font-semibold text-xl mb-2'>Card Title</h1><p>Some quick example text to build on the card title and make up the bulk of the card's content.</p></div><p class='text-xs text-secondary mt-8'>Last updated 5 mins ago</p></article></div></section>"
+          }
+        ]
+      }
+    },
+    "components": {
+      "doc": {
+        "url": "https://perfectui.netlify.app/docs/accordion",
+        "title": "Accordion",
+        "description": "Build vertically collapsing accordions.",
+        "examples": [
+          {
+            "tags": ["accordion", "basic", "group-col", "layout group"],
+            "explanation": [
+              "To create accordions, simply add the `.accordion` class to the `details` parent element."
+            ],
+            "code": "<div class='accordion group-col'><details class='accordion-item'><summary>Accordion #1</summary><article>This is the body of the accordion item. It is hidden by default, until you expand it with a click.</article></details><details class='accordion-item'><summary>Accordion #2</summary><article>This is the body of the accordion item. It is hidden by default, until you expand it with a click.</article></details></div>"
+          },
+          {
+            "tags": ["accordion", "bordered", "group-col"],
+            "explanation": [
+              "To create bordered accordions, simply add the `.accordion-bordered` class."
+            ],
+            "code": "<div class='accordion accordion-bordered group-col'><details class='accordion-item'><summary>Accordion #1</summary><article>This is the body of the accordion item. It is hidden by default, until you expand it with a click.</article></details><details class='accordion-item'><summary>Accordion #2</summary><article>This is the body of the accordion item. It is hidden by default, until you expand it with a click.</article></details></div>"
+          },
+          {
+            "tags": ["accordion", "bordered", "accented", "group-col"],
+            "explanation": [
+              "To create accented accordions when opened, simply add the `.accordion-accented` class."
+            ],
+            "code": "<div class='accordion accordion-bordered accordion-accented group-col'><details class='accordion-item'><summary>Accordion #1</summary><article>This is the body of the accordion item. It is hidden by default, until you expand it with a click.</article></details><details class='accordion-item'><summary>Accordion #2</summary><article>This is the body of the accordion item. It is hidden by default, until you expand it with a click.</article></details></div>"
+          },
+          {
+            "tags": ["accordion", "bordered", "nested", "group-col"],
+            "explanation": [
+              "To create nested accordions, simply add the `.accordion` element inside the `article` of another."
+            ],
+            "code": "<!-- mainly accordion --><div class='accordion accordion-bordered group-col'><details class='accordion-item'><summary>Accordion #1</summary><article><!-- nested accordion --><div class='accordion group-col'><details class='accordion-item'><summary>Accordion #1</summary><article>This is the body of the accordion item. It is hidden by default, until you expand it with a click.</article></details><details class='accordion-item'><summary>Accordion #2</summary><article><!-- nested accordion --><div class='accordion group-col'><details class='accordion-item'><summary>Accordion #1</summary><article>This is the body of the accordion item. It is hidden by default, until you expand it with a click.</article></details></div></article></details></div></article></details><details class='accordion-item'><summary>Accordion #2</summary><article>This is the body of the accordion item. It is hidden by default, until you expand it with a click.</article></details></div>"
+          },
+          {
+            "tags": ["accordion", "bordered", "nested", "aligned", "group-col"],
+            "explanation": [
+              "For basic accordions you can use the `.accordion-aligned` class to align the arrows to the right."
+            ],
+            "code": "<!-- mainly accordion --><div class='accordion accordion-bordered accordion-aligned group-col'><details class='accordion-item'><summary>Accordion #1</summary><article><!-- nested accordion --><div class='accordion accordion-aligned group-col'><details class='accordion-item'><summary>Accordion #1</summary><article>This is the body of the accordion item. It is hidden by default, until you expand it with a click.</article></details><details class='accordion-item'><summary>Accordion #2</summary><article><!-- nested accordion --><div class='accordion accordion-aligned group-col'><details class='accordion-item'><summary>Accordion #1</summary><article>This is the body of the accordion item. It is hidden by default, until you expand it with a click.</article></details></div></article></details></div></article></details><details class='accordion-item'><summary>Accordion #2</summary><article>This is the body of the accordion item. It is hidden by default, until you expand it with a click.</article></details></div>"
+          },
+          {
+            "tags": [
+              "accordion",
+              "bordered",
+              "nested",
+              "mixed",
+              "complex",
+              "group-col"
+            ],
+            "explanation": [
+              "You can mix the variants to create complex accordions."
+            ],
+            "code": "<!-- mainly accordion --><div class='accordion accordion-bordered group-col'><details class='accordion-item'><summary>Accordion #1</summary><article><!-- nested accordion --><div class='accordion accordion-bordered accordion-accented group-col'><details class='accordion-item'><summary>Accordion #1</summary><article>This is the body of the accordion item. It is hidden by defaultuntil you expand it with a click.</article></details><details class='accordion-item'><summary>Accordion #2</summary><article><!-- nested accordion --><div class='accordion accordion-bordered group-col'><details class='accordion-item'><summary>Accordion #1</summary><article>This is the body of the accordion item. It is hidden bdefault, until you expand it with a click.</article></details><details class='accordion-item'><summary>Accordion #2</summary><article>This is the body of the accordion item. It is hidden bdefault, until you expand it with a click.</article></details></div></article></details></div></article></details><details class='accordion-item'><summary>Accordion #2</summary><article>This is the body of the accordion item. It is hidden by default, untiyou expand it with a click.</article></details></div>"
+          },
+          {
+            "tags": ["accordion", "bordered", "arrows", "custom", "group-col"],
+            "explanation": [
+              "To create accordions with custom arrows, simply create an element with the class `.accordion-icon` inside `summary`.",
+              "To define a custom arrow when the accordion is `open` , simply create an element with `.accordion-icon.open` class.",
+              "If you leave the element empty, there will be no arrow."
+            ],
+            "code": "<div class='accordion accordion-bordered group-col'><details class='accordion-item'><summary># Custom arrow<!-- custom arrow --><i class='accordion-icon bi-plus-circle'></i><i class='accordion-icon open bi-dash-circle'></i></summary><article>This is the body of the accordion item. It is hidden by default, until you expand it with a click.</article></details><details class='accordion-item'><summary># Empty arrow<!-- empty arrow --><i class='accordion-icon'></i></summary><article>This is the body of the accordion item. It is hidden by default, until you expand it with a click.</article></details></div>"
+          }
+        ]
+      },
+      "card": {
+        "url": "https://perfectui.netlify.app/docs/card",
+        "title": "Card",
+        "description": "Cards provide a flexible and extensible content container with multiple variants and options.",
+        "examples": [
+          {
+            "tags": ["basic"],
+            "explanation": [
+              "A basic card containing a title, content and an extra corner content. Cards assume no specific width to start, so they'll be 100% wide unless otherwise stated.",
+              "To create cards, simply add the .card class.",
+              "You can use .card-content class for the content, .card-header class for the header and the <hr> tag for the dividers."
+            ],
+            "code": "<div class='card'><header class='card-header flex justify-between gap-2'>Header<i class='bi-three-dots-vertical'></i></header><hr><img alt='Accordion Image' src='https://images.unsplash.comphoto-1680868543815-b8666dba60f7?ixlib=rb-4.0.3ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000h=300&q=80'><article class='card-content flex flex-col gap-2'><h1 class='font-semibold text-xl'>Card Title</h1><p>Some quick example text to build on the card title and make up the bulk ofthe card's content.</p><button class='btn btn-solid-primary w-fit'>Some action</button></article></div>"
+          },
+          {
+            "tags": ["simple body"],
+            "explanation": [
+              "You can use .card-content class to create a simple body example with text"
+            ],
+            "code": "<div class='card'><article class='card-content'>This is some text within a card body.</article></div>"
+          }
+        ]
+      }
+    }
+  }
+}

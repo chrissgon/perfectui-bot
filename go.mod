@@ -3,9 +3,9 @@ module github.com/chrissgon/perfectui-bot
 go 1.22.4
 
 require (
-	github.com/chrissgon/lowbot v1.8.0
+	github.com/chrissgon/lowbot v1.9.0
 	github.com/google/uuid v1.6.0
-	github.com/sashabaranov/go-openai v1.25.0
+	github.com/sashabaranov/go-openai v1.26.0
 )
 
 require (
