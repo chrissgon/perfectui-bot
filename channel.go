@@ -70,6 +70,9 @@ func (channel *IServerChannel) Next(interaction chan *lowbot.Interaction) {
 			interaction <- lowbot.NewInteractionMessageText(channel, sender, string(message))
 		}
 	})
+	http.HandleFunc("/ping", func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusOK)
+	})
 
 	http.ListenAndServe(":8090", nil)
 }
