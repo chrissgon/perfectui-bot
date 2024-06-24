@@ -2,6 +2,16 @@
   "documentation": {
     "getting-started": {
       "installation": {
+        "tags": [
+          "installation",
+          "quick start",
+          "getting started",
+          "npm",
+          "bun",
+          "yarn",
+          "pnpm",
+          "install"
+        ],
         "url": "https://perfectui.netlify.app/docs/installation",
         "title": "Get started with Perfect UI",
         "description": "An exceptionally lightweight and highly customizable CSS and JavaScript framework for crafting elegant user interfaces.",
@@ -217,6 +227,18 @@
     },
     "components": {
       "doc": {
+        "url": "https://perfectui.netlify.app/docs/",
+        "title": "",
+        "description": "",
+        "examples": [
+          {
+            "tags": [],
+            "explanation": [],
+            "code": [""]
+          }
+        ]
+      },
+      "accordion": {
         "url": "https://perfectui.netlify.app/docs/accordion",
         "title": "Accordion",
         "description": "Build vertically collapsing accordions.",

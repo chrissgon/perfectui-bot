@@ -1,0 +1,8 @@
+services:
+  perfectui-bot:
+    build: .
+    container_name: perfectui-bot
+    ports:
+      - 8090:8090
+    env_file:
+      - .env
