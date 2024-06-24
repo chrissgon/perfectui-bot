@@ -6,7 +6,7 @@ COPY . .
 
 RUN GOOS=linux go build .
 
-FROM scratch
+FROM alpine
 
 WORKDIR /bot
 
