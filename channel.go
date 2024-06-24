@@ -71,7 +71,7 @@ func (channel *IServerChannel) Next(interaction chan *lowbot.Interaction) {
 		}
 	})
 	http.HandleFunc("/ping", func(w http.ResponseWriter, r *http.Request) {
-		w.WriteHeader(http.StatusOK)
+		w.Write([]byte("pong"))
 	})
 
 	http.ListenAndServe(":8090", nil)
