@@ -3,7 +3,7 @@ module github.com/chrissgon/perfectui-bot
 go 1.22.4
 
 require (
-	github.com/chrissgon/lowbot v1.9.1
+	github.com/chrissgon/lowbot v1.9.2
 	github.com/google/uuid v1.6.0
 	github.com/gorilla/websocket v1.5.3
 )

@@ -4,6 +4,8 @@ github.com/chrissgon/lowbot v1.9.0 h1:8jdq2kck4lSgtDifEtIjLxPo8jWyYM06Qgd7Tw4nQG
 github.com/chrissgon/lowbot v1.9.0/go.mod h1:T0M3dnkZX/WnjN5NZXWCuw4KcLTZVQuXErlywuMJENM=
 github.com/chrissgon/lowbot v1.9.1 h1:4oazSpd1abpnKMfBB58Fbzeqd5IxbOEZINqDkCyHdtY=
 github.com/chrissgon/lowbot v1.9.1/go.mod h1:T0M3dnkZX/WnjN5NZXWCuw4KcLTZVQuXErlywuMJENM=
+github.com/chrissgon/lowbot v1.9.2 h1:SxxseRPuo+ADCj56EZksvDZNPJEWkQefMjySgfYT6s4=
+github.com/chrissgon/lowbot v1.9.2/go.mod h1:T0M3dnkZX/WnjN5NZXWCuw4KcLTZVQuXErlywuMJENM=
 github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=
 github.com/go-telegram-bot-api/telegram-bot-api/v5 v5.5.1 h1:wG8n/XJQ07TmjbITcGiUaOtXxdrINDz1b0J1w0SzqDc=
 github.com/go-telegram-bot-api/telegram-bot-api/v5 v5.5.1/go.mod h1:A2S0CWkNylc2phvKXWBBdD3K0iGnDBGbzRpISP2zBl8=
