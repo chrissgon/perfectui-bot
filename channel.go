@@ -57,16 +57,16 @@ func (channel *IServerChannel) Next(interaction chan *lowbot.Interaction) {
 		}
 
 		channel.conn[id] = conn
-
+		
 		for {
 			_, message, err := conn.ReadMessage()
-
+			
 			if err != nil {
 				return
 			}
-
+			
 			sender := lowbot.NewWho(id, "user")
-
+			
 			interaction <- lowbot.NewInteractionMessageText(channel, sender, string(message))
 		}
 	})
@@ -94,7 +94,7 @@ func (channel *IServerChannel) SendImage(*lowbot.Interaction) error {
 }
 
 func (channel *IServerChannel) SendText(interaction *lowbot.Interaction) error {
-	sessionID := interaction.Sender.WhoID.(string)
+	sessionID := interaction.Sender.WhoID
 	conn, exists := channel.conn[sessionID]
 
 	if !exists {

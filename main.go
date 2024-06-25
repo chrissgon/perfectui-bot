@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	"log"
 	"os"
 
 	"github.com/chrissgon/lowbot"
@@ -14,7 +14,7 @@ func main() {
 	channel, err := NewServerChannel()
 
 	if err != nil {
-		fmt.Println(err)
+		log.Println(err)
 		return
 	}
 
@@ -22,7 +22,7 @@ func main() {
 	consumer, err := lowbot.NewChatGPTAssistantConsumer(os.Getenv("CHATGPT_TOKEN"), os.Getenv("CHATGPT_ASSISTANT"))
 
 	if err != nil {
-		fmt.Println(err)
+		log.Println(err)
 		return
 	}
 
