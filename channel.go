@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"net/http"
 
 	"github.com/chrissgon/lowbot"
@@ -53,6 +54,7 @@ func (channel *IServerChannel) Next(interaction chan *lowbot.Interaction) {
 		}
 
 		if err != nil {
+			log.Println(err)
 			return
 		}
 
@@ -62,6 +64,7 @@ func (channel *IServerChannel) Next(interaction chan *lowbot.Interaction) {
 			_, message, err := conn.ReadMessage()
 			
 			if err != nil {
+				log.Println(err)
 				return
 			}
 			
