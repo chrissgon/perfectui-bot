@@ -18,8 +18,8 @@ var upgrader = websocket.Upgrader{
 	ReadBufferSize:  1024,
 	WriteBufferSize: 1024,
 	CheckOrigin: func(r *http.Request) bool {
-        return true
-    },
+		return true
+	},
 }
 
 func NewServerChannel() (lowbot.IChannel, error) {
@@ -39,19 +39,13 @@ func (channel *IServerChannel) GetChannel() *lowbot.Channel {
 
 func (channel *IServerChannel) Next(interaction chan *lowbot.Interaction) {
 	http.HandleFunc("/start", func(w http.ResponseWriter, r *http.Request) {
-		var err error
-
 		id := r.URL.Query().Get("id")
 
 		if id == "" {
 			id = uuid.NewString()
 		}
 
-		conn, exists := channel.conn[id]
-
-		if !exists {
-			conn, err = upgrader.Upgrade(w, r, nil)
-		}
+		conn, err := upgrader.Upgrade(w, r, nil)
 
 		if err != nil {
 			log.Println(err)
@@ -59,17 +53,19 @@ func (channel *IServerChannel) Next(interaction chan *lowbot.Interaction) {
 		}
 
 		channel.conn[id] = conn
-		
+
+		defer conn.Close()
+
 		for {
 			_, message, err := conn.ReadMessage()
-			
+
 			if err != nil {
 				log.Println(err)
 				return
 			}
-			
+
 			sender := lowbot.NewWho(id, "user")
-			
+
 			interaction <- lowbot.NewInteractionMessageText(channel, sender, string(message))
 		}
 	})
